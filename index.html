@@ -2,70 +2,243 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>KevinThomas Game Studio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KLDGlobalGame - Creating Fun Casual Games</title>
     <style>
+        :root {
+            --primary: #FF6B6B;
+            --secondary: #4ECDC4;
+            --dark: #292F36;
+            --light: #F7FFF7;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
             line-height: 1.6;
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
-            background-color: #fdfdfd;
-            color: #333;
         }
-        h1, h2 {
-            color: #222;
+
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
         }
-        hr {
-            margin: 30px 0;
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
         }
+
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        nav {
+            background-color: var(--dark);
+            padding: 1rem;
+        }
+
+            nav ul {
+                display: flex;
+                justify-content: center;
+                list-style: none;
+            }
+
+            nav li {
+                margin: 0 1.5rem;
+            }
+
+            nav a {
+                color: white;
+                text-decoration: none;
+                font-weight: 500;
+                transition: color 0.3s;
+            }
+
+                nav a:hover {
+                    color: var(--secondary);
+                }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
         section {
-            margin-bottom: 40px;
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .game-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+            .game-card:hover {
+                transform: translateY(-5px);
+            }
+
+        .game-img {
+            height: 180px;
+            background-color: #ddd;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .game-info {
+            padding: 1.5rem;
+        }
+
+        .game-title {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            margin-top: 1rem;
+        }
+
+            .btn:hover {
+                background-color: #ff5252;
+            }
+
+        footer {
+            background-color: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        .contact-info {
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav li {
+                margin: 0.5rem 0;
+            }
         }
     </style>
 </head>
 <body>
+    <header>
+        <div class="logo">KLDGlobalGame</div>
+        <div class="tagline">Creating Simple, Fun Casual Game Experiences</div>
+    </header>
 
-    <h1>KevinThomas Game Studio</h1>
-    <p><strong>We Create. You Play.</strong><br>
-    Welcome to <strong>KevinThomas</strong>, a passionate indie game team dedicated to crafting fun, polished, and memorable gaming experiences across platforms.</p>
-
-    <hr>
-
-    <section>
-        <h2>🎮 About Us</h2>
-        <p>At <strong>KevinThomas</strong>, we're a tight-knit team of designers, developers, and dreamers who believe in the magic of interactive entertainment.
-        Whether it’s casual mobile titles or experimental prototypes, we put heart into every pixel.</p>
-
-        <p>We value gameplay over gimmicks, polish over pressure, and always listen to our players.</p>
-    </section>
-
-    <section>
-        <h2>🛠️ What We Do</h2>
+    <nav>
         <ul>
-            <li><strong>Mobile Games</strong>: Fast, fun, and built to keep you hooked.</li>
-            <li><strong>Prototypes & Concepts</strong>: We love experimenting with new mechanics.</li>
-            <li><strong>Live Ops & Updates</strong>: We're committed to long-term support for our games.</li>
-            <li><strong>Unity Development</strong>: Our engine of choice, optimized for cross-platform play.</li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#games">Our Games</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
-    </section>
+    </nav>
 
-    <section>
-        <h2>📬 Contact Us</h2>
-        <p>Have a question, partnership inquiry, or just want to say hi?<br>
-        Reach out to us at: <strong>joesphnlo013@gmail.com</strong></p>
+    <div class="container">
+        <section id="home">
+            <h2>Welcome to KLDGlobalGame</h2>
+            <p>We are a studio dedicated to developing high-quality casual games. Our mission is to bring joy and relaxation to players worldwide through simple yet engaging game design.</p>
+            <p>Each game is carefully crafted to be suitable for players of all ages, allowing you to enjoy lighthearted fun during your spare time.</p>
+            <a href="#games" class="btn">Explore Our Games</a>
+        </section>
 
-        <p>We usually respond within 48 hours.</p>
-    </section>
+        <section id="games">
+            <h2>Our Games</h2>
+            <div class="games-grid">
+                <div class="game-card">
+                    <div class="game-img" style="background-image: url('https://via.placeholder.com/400x300')"></div>
+                    <div class="game-info">
+                        <div class="game-title">Bubble Adventure</div>
+                        <p>A colorful bubble-popping game that challenges your strategy and reflexes.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
 
-    <section>
-        <h2>🌟 Stay Tuned</h2>
-        <p>Our next game is always in progress. Follow us, support us, and let’s build great games together.<br>
-        <em>Thanks for being part of our journey.</em></p>
+                <div class="game-card">
+                    <div class="game-img" style="background-image: url('https://via.placeholder.com/400x300')"></div>
+                    <div class="game-info">
+                        <div class="game-title">Farm Story</div>
+                        <p>Manage your dream farm, grow crops, care for animals, and enjoy country life.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
 
-        <p>— <strong>KevinThomas Game Studio Team</strong></p>
-    </section>
+                <div class="game-card">
+                    <div class="game-img" style="background-image: url('https://via.placeholder.com/400x300')"></div>
+                    <div class="game-info">
+                        <div class="game-title">Number Puzzle</div>
+                        <p>A brain-teasing sliding number puzzle with hundreds of challenging levels.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <section id="about">
+            <h2>About Us</h2>
+            <p>KLDGlobalGame was founded in 2020 by a group of passionate game developers. We believe games should be lighthearted and fun, providing people with moments of relaxation in their busy lives.</p>
+            <p>Our team consists of experienced game designers, programmers, and artists committed to creating high-quality casual gaming experiences.</p>
+            <p>To date, our games have been downloaded millions of times worldwide and have received consistently positive feedback from players.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>We'd love to hear your feedback and suggestions! Whether for business collaboration or player feedback, please don't hesitate to reach out.</p>
+            <p>Email: <a href="mailto:yehudjamarru@hotmail.com">yehudjamarru@hotmail.com</a></p>
+            <p>Follow us on social media for the latest game news and updates:</p>
+            <!-- Social media icons can be added here -->
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2023 KLDGlobalGame. All Rights Reserved.</p>
+        <div class="contact-info">
+            <p>Email: yehudjamarru@hotmail.com</p>
+        </div>
+    </footer>
 </body>
 </html>
