@@ -1,4 +1,5 @@
 # Last updated on 2025-07-08
+facebook.com, 674935621241336, DIRECT, c3e20eee3f780d68
 #Admob--------
 google.com, pub-2368191291532374, DIRECT, f08c47fec0942fa0
 # Meta Audience--------
