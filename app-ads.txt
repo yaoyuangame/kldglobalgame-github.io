@@ -4775,5 +4775,6 @@ freewheel.tv, sg1258340, RESELLER
 
 
 bigo.sg, 23167572, DIRECT
+facebook.com, 825372703542227, DIRECT, c3e20eee3f780d68
 
  
